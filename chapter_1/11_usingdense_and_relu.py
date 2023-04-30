@@ -1,7 +1,8 @@
 import numpy as np
 import nnfs
 from nnfs.datasets import spiral_data
-from Layer_Dense import Layer_Dense, Activation_ReLU
+from Layer_Dense import Layer_Dense
+from Activation_ReLU import Activation_ReLU
 # import matplotlib.pyplot as plt
 
 nnfs.init()
@@ -15,5 +16,7 @@ dense1 = Layer_Dense(2, 3)
 dense1.forward(X)
 print('dense1 output', dense1.output[:5])
 
-activation1 = Activation_ReLU(dense1.output)
+activation1 = Activation_ReLU()
+
+activation1.forward(dense1.output)
 print('dense1 relu', activation1.output[:5])
