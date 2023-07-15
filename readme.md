@@ -1,8 +1,8 @@
-# nice lin algebra functions,... I guess...
-pip install NumPi
-# 
-pip install Matplotlib
+## installation
+> pip install -r requirements.txt
 
 
-# this has some various dataset generation tools that may be useful?
-pip install nnfs 
+
+## added a new dependency? dont forget to
+> pip freeze > requirements.txt 
+... or otherwise add the dep to the requirments.txt
