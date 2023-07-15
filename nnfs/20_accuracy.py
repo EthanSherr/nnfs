@@ -13,6 +13,8 @@ predictions = np.argmax(softmax_outputs, axis=1)
 if len(class_targets.shape) == 2:
     class_targets = np.argmax(class_targets, axis=1)
 
+print('softmax_outputs', softmax_outputs)
+
 print('np.argmax(softmax_outputs, axis=1)', np.argmax(softmax_outputs, axis=1))
 print('predictions === class_targets', predictions == class_targets)
 accuracy = np.mean(predictions == class_targets)

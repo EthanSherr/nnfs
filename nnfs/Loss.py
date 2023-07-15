@@ -14,6 +14,7 @@ class Loss_CategoricalCrossentropy(Loss):
         # num saples in a batch
         samples = len(y_pred)
 
+        # y_pred assumed range is 0-1, clip it to epsillon, 1-epsillon
         y_pred_clipped = np.clip(y_pred, epsillon, 1 - epsillon)
 
         if len(y_true.shape) == 1:
